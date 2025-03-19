@@ -1,0 +1,36 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Home Page";
+}
+<form asp-action="Index">
+    <div align ="center">
+        <p>Регистрация</p>
+    </div>
+    <div align="center">
+        <h4>Имя</h4>
+        <label asp-for="Firstname">
+            <input asp-for="Firstname" />
+        </label>
+    </div>
+    <div align="center">
+        <h4>Фамилия</h4>
+        <label asp-for="Secondname">
+            <input asp-for="Secondname" />
+        </label>
+    </div>
+    <div align="center">
+        <h4>Телефон</h4>
+        <label asp-for="PhoneNumber">
+            <input asp-for="PhoneNumber" />
+        </label>
+    </div>
+    <div align="center">
+        <h4>Пароль</h4>
+        <label asp-for="Password">
+            <input asp-for="Password" type="password" />
+        </label>
+    </div>
+    <div aign="center">
+        <input type="submit" value="Регистрация"/>
+    </div>
+</form>

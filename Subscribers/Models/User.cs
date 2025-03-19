@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Subscribers.Models;
 
@@ -7,6 +8,7 @@ public partial class User
 {
     public int Id { get; set; }
 
+    
     public string Firstname { get; set; } = null!;
 
     public string? Secondname { get; set; }

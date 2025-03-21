@@ -1,7 +1,33 @@
-﻿@model Subuser
+﻿@model Subcrib
 @{
     ViewData["Title"] = "AddSub";
 }
 <form asp-action="Index">
-    <div> vsvsvsvsvs </div>
+    <h4>Название</h4>
+    <div>
+        <label asp-for="Name">
+            <input asp-for="Name" />
+        </label>
+    </div>
+    <h4>Тип</h4>
+    <div>
+        <label asp-for="Type">
+            <input asp-for="Type" />
+        </label>
+    </div>
+    <h4>Описание</h4>
+    <div>
+        <label asp-for="Discription">
+            <input asp-for="Discription" />
+        </label>
+    </div>
+    <h4>Цена</h4>
+    <div>
+        <label asp-for="Price">
+            <input asp-for="Price" />
+        </label>
+    </div>
+    <div>
+        <input type="submit" value="Добавить подписку" />
+    </div>
 </form>

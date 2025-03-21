@@ -9,9 +9,19 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Spo2Context>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Время жизни сессии
+    options.Cookie.HttpOnly = true; // Защита от XSS
+    options.Cookie.IsEssential = true; // Сессия будет работать даже без согласия на куки
+});
 builder.Services.AddControllersWithViews();
 
+
+
 var app = builder.Build();
+
+app.UseSession();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

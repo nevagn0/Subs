@@ -13,7 +13,7 @@ namespace Subscribers.Controllers
         }
         public IActionResult Index()
         {
-            if (TempData["UserId"] is int userId)
+            if (HttpContext.Session.GetInt32("UserId") is int userId)
             {
                 var user = _context.Users.FirstOrDefault(u => u.Id == userId);
                 if (user != null)

@@ -5,14 +5,30 @@ namespace Subscribers.Controllers
 {
     public class AddSubcribeController : Controller
     {
+        private readonly Spo2Context _context;
+        public AddSubcribeController(Spo2Context context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Index(User user)
+        public async Task<IActionResult> Index(Subcrib sub,User user)
         {
-            return View();
+            if (HttpContext.Session.GetInt32("UserId") is int userId)
+            {
+                // Привязываем подписку к пользователю
+                sub.Iduser = userId;
+
+                // Добавляем подписку в базу данных
+                _context.Subcribs.Add(sub);
+                await _context.SaveChangesAsync();
+                return View();
+            }
+            Console.WriteLine("ХУЙ");
+                return RedirectToAction("Index", "MainPage"); 
         }
     }
 }

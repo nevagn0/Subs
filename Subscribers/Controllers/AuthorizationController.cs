@@ -23,7 +23,7 @@ namespace Subscribers.Controllers
             var auth = _context.Users.FirstOrDefault(u => u.PhoneNumber == user.PhoneNumber && u.Password == user.Password);
             if (auth != null)
             {
-                TempData["UserId"] = auth.Id;
+                HttpContext.Session.SetInt32("UserId", auth.Id);
                 return RedirectToAction("Index", "MainPage");
             }
             else

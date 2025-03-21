@@ -3,8 +3,16 @@
     ViewData["Title"] = "MainPage";
 }
 
-<form asp-action="Index">
-    <div align = "center">
-        
-    </div>
-</form>
+@if (Model == null)
+{
+    <p>Пользователь не найден.</p>
+}
+else
+{
+    <form asp-action="Index">
+        <h1>Добро пожаловать @Model.Secondname @Model.Firstname!</h1>
+        <div align="center">
+            <input type="submit" asp-controller="AddSubcribe" asp-action="Index" value="Добавить подписку" />
+        </div>
+    </form>
+}

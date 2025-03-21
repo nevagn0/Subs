@@ -14,7 +14,6 @@ namespace Subscribers.Controllers
         }
         public IActionResult Index()
         {
-            
             return View();
         }
         [HttpPost]
@@ -33,7 +32,7 @@ namespace Subscribers.Controllers
 
             SendPasswordOnEmail emailService = new SendPasswordOnEmail();
             emailService.SendPassword(userEmail, emailSubject, emailBody);
-            return RedirectToAction("Index", "MainPage");
+            return RedirectToAction("Index", "Authorization");
         }
     }
 }

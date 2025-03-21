@@ -12,12 +12,4 @@ public partial class Subuser
     public DateOnly? Starttime { get; set; }
 
     public DateOnly? Endtime { get; set; }
-
-    public virtual ICollection<Expense> Expenses { get; set; } = new List<Expense>();
-
-    public virtual Subcrib IdsubNavigation { get; set; } = null!;
-
-    public virtual User IduserNavigation { get; set; } = null!;
-
-    public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
 }

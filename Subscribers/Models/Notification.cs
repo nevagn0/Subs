@@ -13,5 +13,7 @@ public partial class Notification
 
     public int Id { get; set; }
 
-    public virtual Subuser? Subuser { get; set; }
+    public virtual Subcrib? IdsubNavigation { get; set; }
+
+    public virtual User? IduserNavigation { get; set; }
 }

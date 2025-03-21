@@ -17,5 +17,9 @@ public partial class User
 
     public string? Email { get; set; }
 
-    public virtual ICollection<Subuser> Subusers { get; set; } = new List<Subuser>();
+    public virtual ICollection<Expense> Expenses { get; set; } = new List<Expense>();
+
+    public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
+
+    public virtual ICollection<Subcrib> Subcribs { get; set; } = new List<Subcrib>();
 }

@@ -15,5 +15,7 @@ public partial class Expense
 
     public virtual ICollection<Analy> Analies { get; set; } = new List<Analy>();
 
-    public virtual Subuser? Subuser { get; set; }
+    public virtual Subcrib? IdsubNavigation { get; set; }
+
+    public virtual User? IduserNavigation { get; set; }
 }

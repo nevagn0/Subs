@@ -15,5 +15,11 @@ public partial class Subcrib
 
     public decimal? Price { get; set; }
 
-    public virtual ICollection<Subuser> Subusers { get; set; } = new List<Subuser>();
+    public int? Iduser { get; set; }
+
+    public virtual ICollection<Expense> Expenses { get; set; } = new List<Expense>();
+
+    public virtual User? IduserNavigation { get; set; }
+
+    public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
 }

@@ -35,44 +35,45 @@ public partial class Spo2Context : DbContext
     {
         modelBuilder.Entity<Analy>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("analys");
+            entity.HasKey(e => e.Id).HasName("analys_pk");
+
+            entity.ToTable("analys");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedOnAdd()
-                .UseIdentityAlwaysColumn()
+                .ValueGeneratedNever()
                 .HasColumnName("id");
             entity.Property(e => e.Idexp).HasColumnName("idexp");
+
+            entity.HasOne(d => d.IdexpNavigation).WithMany(p => p.Analies)
+                .HasForeignKey(d => d.Idexp)
+                .HasConstraintName("analys_expenses_fk");
         });
 
         modelBuilder.Entity<Expense>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("expenses");
+            entity.HasKey(e => e.Id).HasName("expenses_pk");
+
+            entity.ToTable("expenses");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedOnAdd()
                 .UseIdentityAlwaysColumn()
                 .HasColumnName("id");
             entity.Property(e => e.Idsub).HasColumnName("idsub");
             entity.Property(e => e.Iduser).HasColumnName("iduser");
             entity.Property(e => e.TotalCost).HasColumnName("total_cost");
 
-            entity.HasOne(d => d.Subuser).WithMany()
+            entity.HasOne(d => d.Subuser).WithMany(p => p.Expenses)
                 .HasForeignKey(d => new { d.Iduser, d.Idsub })
                 .HasConstraintName("expenses_subuser_fk");
         });
 
         modelBuilder.Entity<Notification>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("notification");
+            entity.HasKey(e => e.Id).HasName("notification_pk");
+
+            entity.ToTable("notification");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedOnAdd()
                 .UseIdentityAlwaysColumn()
                 .HasColumnName("id");
             entity.Property(e => e.Idsub).HasColumnName("idsub");
@@ -81,7 +82,7 @@ public partial class Spo2Context : DbContext
                 .HasColumnType("character varying")
                 .HasColumnName("messegetext");
 
-            entity.HasOne(d => d.Subuser).WithMany()
+            entity.HasOne(d => d.Subuser).WithMany(p => p.Notifications)
                 .HasForeignKey(d => new { d.Iduser, d.Idsub })
                 .HasConstraintName("notification_subuser_fk");
         });
@@ -117,6 +118,16 @@ public partial class Spo2Context : DbContext
             entity.Property(e => e.Idsub).HasColumnName("idsub");
             entity.Property(e => e.Endtime).HasColumnName("endtime");
             entity.Property(e => e.Starttime).HasColumnName("starttime");
+
+            entity.HasOne(d => d.IdsubNavigation).WithMany(p => p.Subusers)
+                .HasForeignKey(d => d.Idsub)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("subuser_subcrib_fk");
+
+            entity.HasOne(d => d.IduserNavigation).WithMany(p => p.Subusers)
+                .HasForeignKey(d => d.Iduser)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("subuser_user_fk");
         });
 
         modelBuilder.Entity<User>(entity =>

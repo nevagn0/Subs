@@ -14,4 +14,6 @@ public partial class Subcrib
     public string? Type { get; set; }
 
     public decimal? Price { get; set; }
+
+    public virtual ICollection<Subuser> Subusers { get; set; } = new List<Subuser>();
 }

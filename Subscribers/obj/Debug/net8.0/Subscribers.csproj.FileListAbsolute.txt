@@ -171,5 +171,5 @@ D:\ProjectSubscribs\Subscribers\Subscribers\bin\Debug\net8.0\runtimes\browser\li
 D:\ProjectSubscribs\Subscribers\Subscribers\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\ProjectSubscribs\Subscribers\Subscribers\obj\Debug\net8.0\Subscribers.csproj.AssemblyReference.cache
 D:\ProjectSubscribs\Subscribers\Subscribers\obj\Debug\net8.0\Subscrib.DB3E1924.Up2Date
-D:\ProjectSubscribs\Subscribers\Subscribers\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\ProjectSubscribs\Subscribers\Subscribers\obj\Debug\net8.0\Subscribers.sourcelink.json
+D:\ProjectSubscribs\Subscribers\Subscribers\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
 namespace Subscribers.Models;
 
@@ -15,4 +14,6 @@ public partial class User
     public string Password { get; set; } = null!;
 
     public string PhoneNumber { get; set; } = null!;
+
+    public virtual ICollection<Subuser> Subusers { get; set; } = new List<Subuser>();
 }

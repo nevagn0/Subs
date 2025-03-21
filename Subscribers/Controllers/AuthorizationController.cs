@@ -23,7 +23,7 @@ namespace Subscribers.Controllers
             var auth = _context.Users.FirstOrDefault(u => u.PhoneNumber == user.PhoneNumber && u.Password == user.Password);
             if (auth != null)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "MainPage");
             }
             else
             {

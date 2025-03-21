@@ -40,12 +40,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ProjectSubscribs/Subscribers/Subscribers/Views/LK/LK.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTEtcTEsuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/ProjectSubscribs/Subscribers/Subscribers/Views/MainPage/MainPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblBhZ2VcTWFpblBhZ2UuY3NodG1s
+[D:/ProjectSubscribs/Subscribers/Subscribers/Views/MainPage/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpblBhZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ProjectSubscribs/Subscribers/Subscribers/Views/Registration/Registration.cshtml]

@@ -20,37 +20,17 @@ namespace Subscribers.Controllers
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> Index(User user)
         {
-            if (user.Firstname == null || user.Firstname.Length > 50)
+            var auth = _context.Users.FirstOrDefault(u => u.PhoneNumber == user.PhoneNumber && u.Password == user.Password);
+            if (auth != null)
             {
-                ModelState.AddModelError("Firstname", "Имя не может быть пустым или больше 50 символов");
+                return RedirectToAction("Index", "Home");
             }
-
-            if (user.Secondname == null || user.Secondname.Length > 50)
+            else
             {
-                ModelState.AddModelError("Secondname", "Фамилия не может быть пустой или больше 50 символов");
-            }
-
-                string phonePattern = @"^(\+7|8)\d{10}$";
-                if (!Regex.IsMatch(user.PhoneNumber, phonePattern))
-                {
-                    ModelState.AddModelError("PhoneNumber", "Телефон должен быть в формате 89999999999 или +79999999999");
-                }
-
-            if (user.Password == null || user.Password.Length < 8)
-            {
-                ModelState.AddModelError("Password", "Пароль не может быть пустым или быть меньше 8 символов");
-            }
-
-            if (!ModelState.IsValid)
-            {
+                ModelState.AddModelError("PhoneNumber", "Пользователь с такими данными не найден");
+                ModelState.AddModelError("Password", "Пользователь с такими данными не найден");
                 return View("Authorization", user);
             }
-            var aut = _context.Users.FirstOrDefault(u => u.PhoneNumber ==  user.PhoneNumber && u.Password == user.Password);
-            if (aut == null)
-            {
-                ModelState.AddModelError(string.Empty, "Пользоаветь с такими данными не найден");
-            }
-            return RedirectToAction("Index", "Home");
             
         }
     }

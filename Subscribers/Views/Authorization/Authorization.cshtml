@@ -24,6 +24,9 @@
     <div aign="center">
         <input type="submit" value="Вход" />
     </div>
+    <div align = "right">
+        <input asp-action="Reset" type="submit" value = "Забыл пароль"/>
+    </div>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 </form>
 

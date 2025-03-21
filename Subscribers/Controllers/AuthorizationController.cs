@@ -31,7 +31,10 @@ namespace Subscribers.Controllers
                 ModelState.AddModelError("Password", "Пользователь с такими данными не найден");
                 return View("Authorization", user);
             }
-            
+        }
+        public IActionResult Reset()
+        {
+            return RedirectToAction("Index", "ResetPassword");
         }
     }
 }

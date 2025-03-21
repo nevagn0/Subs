@@ -5,19 +5,21 @@ namespace Subscribers.Controllers
 {
     public class SendPasswordOnEmail
     {
-        public void Sendpassword(string email, string subject, string body)
+        public void SendPassword(string email, string subject, string body)
         {
             try
             {
-                string smtpServer = "smt.gmail.com";
+                string smtpServer = "smtp.gmail.com";
                 int smtpPort = 587;
                 string smptAdmin = "shindyapkin0129@gmail.com";
-                string smtpPassword = "Misha1029!";
+                string smtpPassword = "lngv lpzv pglv ssuh";
 
                 MailMessage mail = new MailMessage();
                 mail.From = new MailAddress(smptAdmin);
+                mail.To.Add(email);
                 mail.Subject = subject;
                 mail.Body = body;
+                mail.IsBodyHtml = true;
 
                 SmtpClient smtpClient = new SmtpClient(smtpServer, smtpPort);
                 smtpClient.Credentials = new NetworkCredential(smptAdmin, smtpPassword);

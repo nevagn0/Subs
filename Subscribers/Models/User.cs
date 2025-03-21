@@ -15,5 +15,7 @@ public partial class User
 
     public string PhoneNumber { get; set; } = null!;
 
+    public string? Email { get; set; }
+
     public virtual ICollection<Subuser> Subusers { get; set; } = new List<Subuser>();
 }

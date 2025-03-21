@@ -139,6 +139,9 @@ public partial class Spo2Context : DbContext
             entity.Property(e => e.Id)
                 .UseIdentityAlwaysColumn()
                 .HasColumnName("id");
+            entity.Property(e => e.Email)
+                .HasColumnType("character varying")
+                .HasColumnName("email");
             entity.Property(e => e.Firstname)
                 .HasColumnType("character varying")
                 .HasColumnName("firstname");

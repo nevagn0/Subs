@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "List";
 }
-
+<form>
 <div align="center">
     <h2>Подписки</h2>
     @if (Model != null && Model.Any())
@@ -31,6 +31,9 @@
                             <td>@subs.Endtime.ToShortDateString()</td>
                         </tr>
                     </table>
+                            <div class="addsub-form-group">
+                                <button asp-action="Update" type="submit" style="color:orangered">Редактировать</button>
+                            </div>
                 </div>
             }
         </div>
@@ -39,4 +42,5 @@
     {
         <p>У вас нет подписок.</p>
     }
-</div>
+    </div>
+</form>

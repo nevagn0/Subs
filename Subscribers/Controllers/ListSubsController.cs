@@ -21,5 +21,9 @@ namespace Subscribers.Controllers
             }
             return View(new List<Subcrib>());
         }
+        public IActionResult Update()
+        {
+            return RedirectToAction("Index", "Update");
+        }
     }
 }

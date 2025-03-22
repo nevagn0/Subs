@@ -2,32 +2,44 @@
 @{
     ViewData["Title"] = "AddSub";
 }
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 <form asp-action="Index">
-    <h4>Название</h4>
     <div>
-        <label asp-for="Name">
-            <input asp-for="Name" />
-        </label>
-    </div>
-    <h4>Тип</h4>
-    <div>
-        <label asp-for="Type">
-            <input asp-for="Type" />
-        </label>
-    </div>
-    <h4>Описание</h4>
-    <div>
-        <label asp-for="Discription">
-            <input asp-for="Discription" />
-        </label>
-    </div>
-    <h4>Цена</h4>
-    <div>
-        <label asp-for="Price">
-            <input asp-for="Price" />
-        </label>
-    </div>
-    <div>
-        <input type="submit" value="Добавить подписку" />
+        <h1 class="addsub-title">Добавить подписку</h1>
+        <form asp-action="Index" class="addsub-form">
+            <div class="addsub-form-group">
+                <label asp-for="Name" class="addsub-label">Название</label>
+                <input asp-for="Name" class="addsub-input" placeholder="Введите название" />
+            </div>
+            <div class="addsub-form-group">
+                <label asp-for="Type" class="addsub-label">Тип</label>
+                <input asp-for="Type" class="addsub-input" placeholder="Введите тип" />
+            </div>
+            <div class="addsub-form-group">
+                <label asp-for="Discription" class="addsub-label">Описание</label>
+                <input asp-for="Discription" class="addsub-input" placeholder="Введите описание" />
+            </div>
+            <div class="addsub-form-group">
+                <label asp-for="Price" class="addsub-label">Цена</label>
+                <input asp-for="Price" class="addsub-input" placeholder="Введите цену" />
+            </div>
+            <div class="addsub-form-group">
+                <label asp-for="Endtime" class="addsub-label">Дата окончания подписки</label>
+                <input asp-for="Endtime" id="datepicker" class="addsub-input" placeholder="Выберите дату" />
+            </div>
+            <div class="addsub-form-group">
+                <button type="submit" class="addsub-btn">Добавить подписку</button>
+            </div>
+        </form>
     </div>
 </form>
+
+<script>
+    flatpickr("#datepicker", {
+        dateFormat: "Y-m-d", 
+        minDate: "today", 
+    });
+</script>

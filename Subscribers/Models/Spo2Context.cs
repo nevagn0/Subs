@@ -107,6 +107,7 @@ public partial class Spo2Context : DbContext
             entity.Property(e => e.Discription)
                 .HasColumnType("character varying")
                 .HasColumnName("discription");
+            entity.Property(e => e.Endtime).HasColumnName("endtime");
             entity.Property(e => e.Iduser).HasColumnName("iduser");
             entity.Property(e => e.Name)
                 .HasColumnType("character varying")

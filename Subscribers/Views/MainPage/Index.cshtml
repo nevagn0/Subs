@@ -10,12 +10,12 @@
 else
 {
     <form asp-action="Index">
-        <h1>Добро пожаловать @Model.Secondname @Model.Firstname!</h1>
-        <div align="center">
-            <input type="submit" asp-controller="AddSubcribe" asp-action="Index" value="Добавить подписку" />
-        </div>
-        <div align="center">
-            <input type="submit" asp-controller="ListSubs" asp-action="Index" value="Мои подписки" />
+        <div>
+            <h1 class="welcome-text">Добро пожаловать, @Model.Secondname @Model.Firstname!</h1>
+            <div class="button-container">
+                <a asp-controller="AddSubcribe" asp-action="Index" class="btn btn-primary">Добавить подписку</a>
+                <a asp-controller="ListSubs" asp-action="Index" class="btn btn-secondary">Мои подписки</a>
+            </div>
         </div>
     </form>
 }

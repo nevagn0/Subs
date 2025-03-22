@@ -17,6 +17,8 @@ public partial class Subcrib
 
     public int? Iduser { get; set; }
 
+    public DateOnly Endtime { get; set; }
+
     public virtual ICollection<Expense> Expenses { get; set; } = new List<Expense>();
 
     public virtual User? IduserNavigation { get; set; }

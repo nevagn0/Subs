@@ -8,17 +8,32 @@
     <h2>Подписки</h2>
     @if (Model != null && Model.Any())
     {
-        <table>
+        <div class="subscriptions-container">
             @foreach (var subs in Model)
             {
-                <tr>
-                    <td>@subs.Name</td>
-                    <td>@subs.Type</td>
-                    <td>@subs.Discription</td>
-                    <td>@subs.Price</td>
-                </tr>
+                <div class="subscription-card">
+                    <h3 class="subscription-title">@subs.Name</h3>
+                    <table>
+                        <tr>
+                            <th>Тип</th>
+                            <td>@subs.Type</td>
+                        </tr>
+                        <tr>
+                            <th>Описание</th>
+                            <td>@subs.Discription</td>
+                        </tr>
+                        <tr>
+                            <th>Цена</th>
+                            <td>@subs.Price</td>
+                        </tr>
+                        <tr>
+                            <th>Дата окончания</th>
+                            <td>@subs.Endtime.ToShortDateString()</td>
+                        </tr>
+                    </table>
+                </div>
             }
-        </table>
+        </div>
     }
     else
     {

@@ -17,9 +17,9 @@ namespace Subscribers.Controllers
             if (HttpContext.Session.GetInt32("UserId") is int userId)
             {
                 var userSubs = _context.Subcribs.Where(u => u.Iduser == userId).ToList();
-                return View(userSubs);  // Передаем список подписок в представление Index.cshtml
+                return View(userSubs);  
             }
-            return View(new List<Subcrib>());  // Передаем пустой список, если пользователь не найден
+            return View(new List<Subcrib>());
         }
     }
 }

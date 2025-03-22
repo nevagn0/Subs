@@ -7,21 +7,27 @@
 
     @if (ViewBag.TotalExpenses != null && ViewBag.TotalExpenses > 0)
     {
-        <p>Общая сумма расходов на подписки: <strong>@ViewBag.TotalExpenses.ToString("C")</strong></p>
+        <div class="total-expenses">
+            <span class="total-label">Общая сумма расходов:</span>
+            <span class="total-amount">@ViewBag.TotalExpenses.ToString("N0") ₽</span>
+        </div>
 
         <h3>Список подписок:</h3>
-        <div class="subscriptions-container">
+        <div class="subs-container">
             @foreach (var sub in ViewBag.Subscriptions)
             {
-                <div class="subscription-card">
-                    <h4>@sub.Name</h4>
-                    <p>Цена: @sub.Price.ToString("C")</p>
+                <div class="subs-card">
+                    <div class="subs-info">
+                        <h1>@sub.Name</h1>
+                        <p>Цена: @sub.Price.ToString("N0") ₽</p>
+                        <p class="end-date">До @sub.Endtime.ToShortDateString()</p>
+                    </div>
                 </div>
             }
         </div>
     }
     else
     {
-        <p>У вас нет активных подписок.</p>
+        <p class="no-subs">У вас нет активных подписок.</p>
     }
 </div>

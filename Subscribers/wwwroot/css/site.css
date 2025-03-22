@@ -433,3 +433,122 @@ body {
         transform: translateY(-5px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
+.total-expenses {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.total-label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.total-amount {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.subscriptions-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.total-expenses {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+.total-label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.total-amount {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Стили для контейнера подписок */
+.subs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Стили для карточки подписки */
+.subs-card {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .subs-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+/* Стили для иконки подписки */
+.subs-icon img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Стили для информации о подписке */
+.subs-info h4 {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.subs-info p {
+    margin: 5px 0;
+    color: #ddd;
+}
+
+.end-date {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Стили для сообщения об отсутствии подписок */
+.no-subs {
+    font-size: 18px;
+    color: #666;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

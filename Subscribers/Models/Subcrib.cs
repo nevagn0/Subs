@@ -13,7 +13,7 @@ public partial class Subcrib
 
     public string? Type { get; set; }
 
-    public decimal? Price { get; set; }
+    public decimal Price { get; set; }
 
     public int? Iduser { get; set; }
 

@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Мои расходы на подписки";
+}
+
+<div align="center">
+    <h2>Мои расходы на подписки</h2>
+
+    @if (ViewBag.TotalExpenses != null && ViewBag.TotalExpenses > 0)
+    {
+        <p>Общая сумма расходов на подписки: <strong>@ViewBag.TotalExpenses.ToString("C")</strong></p>
+
+        <h3>Список подписок:</h3>
+        <div class="subscriptions-container">
+            @foreach (var sub in ViewBag.Subscriptions)
+            {
+                <div class="subscription-card">
+                    <h4>@sub.Name</h4>
+                    <p>Цена: @sub.Price.ToString("C")</p>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>У вас нет активных подписок.</p>
+    }
+</div>

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Subscribers.Models;
 using System.Net.Mail;
+using Microsoft.AspNetCore.Identity;
 
 namespace Subscribers.Controllers
 {
@@ -27,8 +28,10 @@ namespace Subscribers.Controllers
             }
             string userEmail = confirEmail.Email;
             string UserPassword = confirEmail.Password;
+            string UserFirstName = confirEmail.Firstname;
+            string UserSecondName = confirEmail.Secondname;
             string emailSubject = "Восстановление пароля";
-            string emailBody = $"<h1>Ваш пароль:</h1><p>{UserPassword}</p>";
+            string emailBody = $"<div><h1>Здарваствуйте, {UserSecondName} {UserFirstName}! </h1> </div> <h2>Ваш пароль:</h2><p>{UserPassword}</p>";
 
             SendPasswordOnEmail emailService = new SendPasswordOnEmail();
             emailService.SendPassword(userEmail, emailSubject, emailBody);

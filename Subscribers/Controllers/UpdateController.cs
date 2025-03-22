@@ -23,5 +23,12 @@ namespace Subscribers.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index", "Listsubs");
         }
+        [HttpPost]
+        public IActionResult Delete(Subcrib subs)
+        {
+            _context.Subcribs.Remove(subs);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "ListSubs");
+        }
     }
 }

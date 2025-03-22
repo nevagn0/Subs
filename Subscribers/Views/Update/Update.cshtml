@@ -39,4 +39,10 @@
             <button type="submit" class="btn-save">Сохранить</button>
         </div>
     </form>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <button type="submit" class="btn-save">Удалить</button>
+        </div>
+    </form>
 </div>

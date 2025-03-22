@@ -3,16 +3,25 @@
 @{
     ViewData["Title"] = "MainPage";
 }
-<form asp-action="Index">
-    <div align ="center">
-        <h2>Подписки</h2>
-        @foreach(var subs in Model){
-            <tr>
-                <td>@subs.Name</td>
-                <td>@subs.Type</td>
-                <td>@subs.Discription</td>
-                <td>@subs.Price</td>
-            </tr>
-        }
-    </div>
-</form>
+
+<div align="center">
+    <h2>Подписки</h2>
+    @if (Model != null && Model.Any())
+    {
+        <table>
+            @foreach (var subs in Model)
+            {
+                <tr>
+                    <td>@subs.Name</td>
+                    <td>@subs.Type</td>
+                    <td>@subs.Discription</td>
+                    <td>@subs.Price</td>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <p>У вас нет подписок.</p>
+    }
+</div>

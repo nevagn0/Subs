@@ -15,7 +15,7 @@ namespace Subscribers.Controllers
             return View();
         }
         [HttpPost]
-        public async Task<IActionResult> Index(Subcrib sub,User user)
+        public async Task<IActionResult> Index(Subcrib sub)
         {
             if (HttpContext.Session.GetInt32("UserId") is int userId)
             {

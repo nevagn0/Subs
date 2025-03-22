@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "And8fwORBp+XgvUorGtSoPTRG8wYQimFopwyutrNy8M=",
+  "Hash": "m/tgnUMsApQjfPUWE4107/6xeUGdFoODP5ArF+JBCMI=",
   "Source": "Subscribers",
   "BasePath": "_content/Subscribers",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "70yxjtg7ba",
-      "Integrity": "Z3GL5gD+iVk65L+kxhtG1IwKK3CNOnt1Y954A/7ui1Q=",
+      "Fingerprint": "xm8d2guabf",
+      "Integrity": "B7Fv58WBWxiTxWSN3X+ty55vg1AYPl1rJv9g6Szv1TY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1321,51 +1321,6 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.70yxjtg7ba.css",
-      "AssetFile": "D:\\ProjectSubscribs\\Subscribers\\Subscribers\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4767"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Z3GL5gD+iVk65L+kxhtG1IwKK3CNOnt1Y954A/7ui1Q=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 10:33:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "70yxjtg7ba"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Z3GL5gD+iVk65L+kxhtG1IwKK3CNOnt1Y954A/7ui1Q="
-        }
-      ]
-    },
-    {
       "Route": "css/site.css",
       "AssetFile": "D:\\ProjectSubscribs\\Subscribers\\Subscribers\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1376,7 +1331,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4767"
+          "Value": "5203"
         },
         {
           "Name": "Content-Type",
@@ -1384,11 +1339,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Z3GL5gD+iVk65L+kxhtG1IwKK3CNOnt1Y954A/7ui1Q=\""
+          "Value": "\"B7Fv58WBWxiTxWSN3X+ty55vg1AYPl1rJv9g6Szv1TY=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 10:33:02 GMT"
+          "Value": "Sat, 22 Mar 2025 10:53:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1398,7 +1353,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Z3GL5gD+iVk65L+kxhtG1IwKK3CNOnt1Y954A/7ui1Q="
+          "Value": "sha256-B7Fv58WBWxiTxWSN3X+ty55vg1AYPl1rJv9g6Szv1TY="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.xm8d2guabf.css",
+      "AssetFile": "D:\\ProjectSubscribs\\Subscribers\\Subscribers\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5203"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"B7Fv58WBWxiTxWSN3X+ty55vg1AYPl1rJv9g6Szv1TY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Mar 2025 10:53:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "xm8d2guabf"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-B7Fv58WBWxiTxWSN3X+ty55vg1AYPl1rJv9g6Szv1TY="
         }
       ]
     },

@@ -228,3 +228,24 @@ body {
         transform: translateY(-5px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
+
+.btn-reset {
+    padding: 10px 20px; 
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px; 
+}
+
+    .btn-reset:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+.form-group {
+    margin-bottom: 15px; 
+}

@@ -19,16 +19,12 @@ namespace Subscribers.Controllers
         {
             if (HttpContext.Session.GetInt32("UserId") is int userId)
             {
-                // Привязываем подписку к пользователю
                 sub.Iduser = userId;
-
-                // Добавляем подписку в базу данных
                 _context.Subcribs.Add(sub);
                 await _context.SaveChangesAsync();
                 return View();
             }
-            Console.WriteLine("ХУЙ");
-                return RedirectToAction("Index", "MainPage"); 
+            return RedirectToAction("Index", "MainPage"); 
         }
     }
 }

@@ -23,5 +23,6 @@ namespace Subscribers.Controllers
             }
             return RedirectToAction("Index", "Authorization");
         }
+       
     }
 }

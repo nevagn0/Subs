@@ -1,0 +1,18 @@
+﻿@model List<Subcrib>
+
+@{
+    ViewData["Title"] = "MainPage";
+}
+<form asp-action="Index">
+    <div align ="center">
+        <h2>Подписки</h2>
+        @foreach(var subs in Model){
+            <tr>
+                <td>@subs.Name</td>
+                <td>@subs.Type</td>
+                <td>@subs.Discription</td>
+                <td>@subs.Price</td>
+            </tr>
+        }
+    </div>
+</form>

@@ -2,47 +2,37 @@
 @{
     ViewData["Title"] = "Registration";
 }
-<form asp-action="Index">
-    <div align ="center">
-        <p>Регистрация</p>
-    </div>
-    <div align="center">
-        <h4>Имя</h4>
-        <label asp-for="Firstname">
-            <input asp-for="Firstname" />
-            <span asp-validation-for="Firstname"></span>
-        </label>
-    </div>
-    <div align="center">
-        <h4>Фамилия</h4>
-        <label asp-for="Secondname">
-            <input asp-for="Secondname" />
-            <span asp-validation-for="Secondname"></span>
-        </label>
-    </div>
-    <div align="center">
-        <h4>Телефон</h4>
-        <label asp-for="PhoneNumber">
-            <input asp-for="PhoneNumber" />
-            <span asp-validation-for="PhoneNumber"></span>
-        </label>
 
-    </div>
-    <div align="center">
-        <h4>Почта</h4>
-        <label asp-for="Email">
-            <input asp-for="Email" />
-            <span asp-validation-for="Email"></span>
-        </label>
-    </div>
-    <div align="center">
-        <h4>Пароль</h4>
-        <label asp-for="Password">
-            <input asp-for="Password" type="password" />
-            <span asp-validation-for="Password"></span>
-        </label>
-    </div>
-    <div aign="center">
-        <input type="submit" value="Регистрация"/>
-    </div>
-</form>
+<div class="registration-container">
+    <h1 class="registration-title">Регистрация</h1>
+    <form asp-action="Index" class="registration-form">
+        <div class="form-group">
+            <label asp-for="Firstname" class="form-label">Имя</label>
+            <input asp-for="Firstname" class="form-input" placeholder="Введите ваше имя" />
+            <span asp-validation-for="Firstname" class="validation-message"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Secondname" class="form-label">Фамилия</label>
+            <input asp-for="Secondname" class="form-input" placeholder="Введите вашу фамилию" />
+            <span asp-validation-for="Secondname" class="validation-message"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="PhoneNumber" class="form-label">Телефон</label>
+            <input asp-for="PhoneNumber" class="form-input" placeholder="Введите ваш телефон" />
+            <span asp-validation-for="PhoneNumber" class="validation-message"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Email" class="form-label">Почта</label>
+            <input asp-for="Email" class="form-input" placeholder="Введите вашу почту" />
+            <span asp-validation-for="Email" class="validation-message"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Password" class="form-label">Пароль</label>
+            <input asp-for="Password" type="password" class="form-input" placeholder="Введите ваш пароль" />
+            <span asp-validation-for="Password" class="validation-message"></span>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn-register">Зарегистрироваться</button>
+        </div>
+    </form>
+</div>

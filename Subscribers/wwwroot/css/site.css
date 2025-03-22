@@ -1,4 +1,3 @@
-/* Основные стили для страницы */
 body {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: #fff;
@@ -59,7 +58,6 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Стили для информационного раздела */
 .info-section {
     margin-top: 40px;
     text-align: left;
@@ -98,7 +96,6 @@ body {
                 top: -5px;
             }
 
-/* Стили для формы подписки */
 .subscribe-section {
     margin-top: 40px;
 }
@@ -123,16 +120,22 @@ body {
 .subscribe-input {
     padding: 15px;
     font-size: 1rem;
-    border: none;
-    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
     width: 300px;
     outline: none;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
+    transition: all 0.3s ease;
 }
 
     .subscribe-input::placeholder {
         color: rgba(255, 255, 255, 0.7);
+    }
+
+    .subscribe-input:focus {
+        border-color: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.2);
     }
 
 .btn-subscribe {
@@ -140,13 +143,89 @@ body {
     padding: 15px 30px;
     font-size: 1rem;
     border: none;
-    border-radius: 50px;
+    border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     color: #fff;
 }
 
     .btn-subscribe:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+/* Стили для страницы регистрации */
+.registration-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+}
+
+.registration-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-label {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.form-input {
+    padding: 15px;
+    font-size: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+    .form-input::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .form-input:focus {
+        border-color: rgba(255, 255, 255, 0.7);
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+.validation-message {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+}
+
+.btn-register {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .btn-register:hover {
         transform: translateY(-5px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }

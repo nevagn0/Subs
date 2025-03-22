@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/oxpuU6nbV0Gn7Vj/6sqjjQTOguCGJ1tduMP+0JJr98=",
+  "Hash": "And8fwORBp+XgvUorGtSoPTRG8wYQimFopwyutrNy8M=",
   "Source": "Subscribers",
   "BasePath": "_content/Subscribers",
   "Mode": "Default",
@@ -73,8 +73,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wyirql5vjv",
-      "Integrity": "OInedeeforWQ0f5pK2eUp6gQezKbsgeDPr9q1SRXnOU=",
+      "Fingerprint": "70yxjtg7ba",
+      "Integrity": "Z3GL5gD+iVk65L+kxhtG1IwKK3CNOnt1Y954A/7ui1Q=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1321,6 +1321,51 @@
   ],
   "Endpoints": [
     {
+      "Route": "css/site.70yxjtg7ba.css",
+      "AssetFile": "D:\\ProjectSubscribs\\Subscribers\\Subscribers\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4767"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Z3GL5gD+iVk65L+kxhtG1IwKK3CNOnt1Y954A/7ui1Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 22 Mar 2025 10:33:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "70yxjtg7ba"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Z3GL5gD+iVk65L+kxhtG1IwKK3CNOnt1Y954A/7ui1Q="
+        }
+      ]
+    },
+    {
       "Route": "css/site.css",
       "AssetFile": "D:\\ProjectSubscribs\\Subscribers\\Subscribers\\wwwroot\\css\\site.css",
       "Selectors": [],
@@ -1331,7 +1376,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4805"
+          "Value": "4767"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1384,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OInedeeforWQ0f5pK2eUp6gQezKbsgeDPr9q1SRXnOU=\""
+          "Value": "\"Z3GL5gD+iVk65L+kxhtG1IwKK3CNOnt1Y954A/7ui1Q=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 10:29:33 GMT"
+          "Value": "Sat, 22 Mar 2025 10:33:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,52 +1398,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-OInedeeforWQ0f5pK2eUp6gQezKbsgeDPr9q1SRXnOU="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.wyirql5vjv.css",
-      "AssetFile": "D:\\ProjectSubscribs\\Subscribers\\Subscribers\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4805"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"OInedeeforWQ0f5pK2eUp6gQezKbsgeDPr9q1SRXnOU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 22 Mar 2025 10:29:33 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "wyirql5vjv"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-OInedeeforWQ0f5pK2eUp6gQezKbsgeDPr9q1SRXnOU="
+          "Value": "sha256-Z3GL5gD+iVk65L+kxhtG1IwKK3CNOnt1Y954A/7ui1Q="
         }
       ]
     },

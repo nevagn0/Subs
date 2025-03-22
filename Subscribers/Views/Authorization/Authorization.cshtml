@@ -3,38 +3,24 @@
     ViewData["Title"] = "Authorization";
 }
 <form asp-action="Index">
-    <div align="center">
-        <p>Вход</p>
-    </div>
-    <div align="center">
-    <div align="center">
-        <h4>Телефон</h4>
-        <label asp-for="PhoneNumber">
-            <input asp-for="PhoneNumber" />
-            <span asp-validation-for="PhoneNumber"></span>
-        </label>
-    </div>
-
-    <div align="center">
-        <h4>Почта</h4>
-        <label asp-for="Email">
-                <input asp-for="Email" />
-                <span asp-validation-for="Email"></span>
-        </label>
-    </div>
-
-    <div align="center">
-        <h4>Пароль</h4>
-        <label asp-for="Password">
-            <input asp-for="Password" type="password" />
-            <span asp-validation-for="Password"></span>
-        </label>
-    </div>
-    <div aign="center">
-        <input type="submit" value="Вход" />
-    </div>
-    <div align = "right">
-        <input asp-action="Reset" type="submit" value = "Забыл пароль"/>
+    <div class="registration-container">
+        <h1 class="registration-title">Вход</h1>
+        <form asp-action="Index" class="registration-form">
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="form-label">Телефон</label>
+                <input asp-for="PhoneNumber" class="form-input" placeholder="Введите ваш телефон" />
+                <span asp-validation-for="PhoneNumber" class="validation-message"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="form-label">Пароль</label>
+                <input asp-for="Password" type="password" class="form-input" placeholder="Введите ваш пароль" />
+                <span asp-validation-for="Password" class="validation-message"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn-register">Войти</button>
+                <input asp-action="Reset" class="btn-register" type="submit" value="Забыл пароль" />
+            </div>
+        </form>
     </div>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 </form>
